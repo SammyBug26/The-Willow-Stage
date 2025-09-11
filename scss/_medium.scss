@@ -1,0 +1,21 @@
+/* NAVIGATION STUFF GOES HERE  */
+nav {
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: $gutter;
+    } //end ul
+    ul li a {
+        margin: 10px 0;
+        font-size: 2rem;
+    }
+    ul li a:hover {
+        text-decoration: underline 2px $greyColor;
+    } // end hover
+} // end nav
+
+header{
+    span{
+         font-size: 3rem;
+    }
+}

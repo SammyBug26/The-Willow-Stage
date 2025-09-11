@@ -1,0 +1,176 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    background-color: rgba($primaryColor, 0.5);
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper { background-color: $secondaryColor;}
+header {
+    display: flex;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+
+    span {
+        font-size: 2rem;
+        font-weight: $normalWeight;
+        color: $greyColor;
+     
+       // padding:.5rem 5rem;
+    }
+
+    a {
+  text-decoration: none;
+  color: $greyColor;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+    a:hover {
+    color: #999;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+#navWrapper {
+    background-color: $primaryColor;
+}
+nav {
+
+   ul {
+        padding: 0;
+        margin: 0 $gutter;
+   }
+    ul li {
+        list-style-type: none;
+    }
+    ul li a {
+        color: $greyColor;
+        text-decoration: none;
+        display: block;
+        padding: .8rem $gutter;
+        font-size: 1.5rem;
+    } //end ul li a
+    ul li.active a {
+        background-color: rgba(255,255,255,0.8);
+        color: $primaryColor;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+//main
+main {padding: 1rem 2vw;}
+h1 {font-size: 3rem;}
+
+
+//apply to all children
+main > div > div {
+    
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba($secondaryColor, 0.5);
+    h2 {font-size: 1.4rem; padding-left: 10px; padding-right: 10px;}
+    img {
+        display: block;
+        width: 100%; 
+        height: auto;
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+
+// flex box cards 1
+.parent1 {
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 8px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}//end parent1
+
+//flex box cards 2
+.parent2{
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px 20px;
+    div {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 200px;
+    }
+} // end parent2
+
+.parent3 {
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+    column-gap: 8px;
+    div{
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 200px;
+    }
+}//end parent3
+
+.parent4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px 8px;
+} // end parent4
+
+
+
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+    a {color: $greyColor;}
+}// end footer
