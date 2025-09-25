@@ -2,7 +2,7 @@
 nav {
     ul {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-around;
         column-gap: $gutter;
     } //end ul
     ul li a {
@@ -10,7 +10,9 @@ nav {
         font-size: 2rem;
     }
     ul li a:hover {
-        text-decoration: underline 2px $greyColor;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-underline-offset: 3px;
     } // end hover
 } // end nav
 

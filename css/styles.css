@@ -304,6 +304,7 @@ template {
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  width: 100%;
 }
 
 /*  Apply a natural box layout model to all elements  */
@@ -313,15 +314,15 @@ html {
 
 /* --------------------------- BODY --------------------------- */
 body {
-  font-family: "Story Script", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  background-color: rgba(65, 127, 90, 0.5);
+  background-color: rgba(64, 37, 22, 0.5);
   min-width: 320px;
 }
 
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  background-color: #93278F;
+  background-color: #868C54;
 }
 
 header {
@@ -335,11 +336,11 @@ header {
 header span {
   font-size: 2rem;
   font-weight: 500;
-  color: #ccc;
+  color: #F2F2F2;
 }
 header a {
   text-decoration: none;
-  color: #ccc;
+  color: #F2F2F2;
   font-weight: bold;
   padding-left: 15px;
 }
@@ -349,7 +350,7 @@ header a:hover {
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
-  background-color: #417f5a;
+  background-color: #402516;
 }
 
 nav ul {
@@ -360,7 +361,8 @@ nav ul li {
   list-style-type: none;
 }
 nav ul li a {
-  color: #ccc;
+  color: #F2F2F2;
+  text-align: center;
   text-decoration: none;
   display: block;
   padding: 0.8rem 10px;
@@ -368,104 +370,58 @@ nav ul li a {
 }
 nav ul li.active a {
   background-color: rgba(255, 255, 255, 0.8);
-  color: #417f5a;
+  color: #402516;
   border-radius: 10px;
 }
 
 /* --------------------------- MAIN --------------------------- */
 main {
-  padding: 1rem 2vw;
+  width: 100%;
 }
 
 h1 {
   font-size: 3rem;
 }
 
-main > div > div {
-  text-align: center;
-  border-radius: 10px;
-  background-color: rgba(147, 39, 143, 0.5);
-}
-main > div > div h2 {
-  font-size: 1.4rem;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-main > div > div img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 0px 0px 10px 10px;
-}
-
-.parent1 {
-  margin: 0 2vw;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 8px;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-}
-.parent1 img {
+.hero img {
   width: 100%;
   height: auto;
 }
 
-.parent2 {
-  margin: 0 2vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px 20px;
-}
-.parent2 div {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 200px;
+video {
+  width: 90%;
+  margin-left: 5%;
 }
 
-.parent3 {
-  margin: 0 2vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  row-gap: 8px;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+details {
+  margin: 0.5rem 10px;
+  font-size: 1.5rem;
 }
-.parent3 div {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: 200px;
-}
-
-.parent4 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px 8px;
+details summary {
+  font-size: 2rem;
 }
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #417f5a;
+  background-color: #402516;
 }
 
 footer {
   font-size: 0.85rem;
   padding: 1rem 10px;
-  color: #ccc;
+  color: #F2F2F2;
   text-align: center;
   line-height: 150%;
 }
 footer a {
-  color: #ccc;
+  color: #F2F2F2;
 }
 
 @media only screen and (min-width: 35rem) {
   /* NAVIGATION STUFF GOES HERE  */
   nav ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     -moz-column-gap: 10px;
          column-gap: 10px;
   }
@@ -474,21 +430,27 @@ footer a {
     font-size: 2rem;
   }
   nav ul li a:hover {
-    -webkit-text-decoration: underline 2px #ccc;
-            text-decoration: underline 2px #ccc;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 3px;
   }
   header span {
     font-size: 3rem;
   }
 }
 @media only screen and (min-width: 64rem) {
-  header, nav, main {
+  header, nav {
     max-width: 960px;
     margin: auto;
   }
   /* NAVIGATION STUFF GOES HERE  */
+  nav ul {
+    justify-content: flex-end;
+  }
   nav ul li a {
-    padding: 0.5rem 10px;
+    padding: 0.4rem 1rem;
+  }
+  nav ul li a {
     font-size: 2rem;
   }
   header span {

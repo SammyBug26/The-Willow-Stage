@@ -2,6 +2,7 @@
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    width: 100%;
 }
 
 /*  Apply a natural box layout model to all elements  */
@@ -66,6 +67,7 @@ nav {
     }
     ul li a {
         color: $greyColor;
+        text-align: center;
         text-decoration: none;
         display: block;
         padding: .8rem $gutter;
@@ -91,72 +93,25 @@ nav {
 
 /* --------------------------- MAIN --------------------------- */
 //main
-main {padding: 1rem 2vw;}
+main {width: 100%;}
 h1 {font-size: 3rem;}
-
-
-//apply to all children
-main > div > div {
-    
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgba($secondaryColor, 0.5);
-    h2 {font-size: 1.4rem; padding-left: 10px; padding-right: 10px;}
-    img {
-        display: block;
-        width: 100%; 
-        height: auto;
-        border-radius: 0px 0px 10px 10px;
-    }
+.hero img {
+    width: 100%;
+    height: auto;
 }
 
-// flex box cards 1
-.parent1 {
-    margin: 0 2vw;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 8px;
-    column-gap: 8px;
-    img {
-        width: 100%;
-        height: auto;
-    }
-}//end parent1
+video {
+    width: 90%;
+    margin-left: 5%;
+}
 
-//flex box cards 2
-.parent2{
-    margin: 0 2vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px 20px;
-    div {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 200px;
-    }
-} // end parent2
-
-.parent3 {
-    margin: 0 2vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 8px;
-    column-gap: 8px;
-    div{
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: 200px;
-    }
-}//end parent3
-
-.parent4 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px 8px;
-} // end parent4
-
+details {
+    margin: .5rem $gutter;
+    font-size: 1.5rem;
+summary {
+    font-size: 2rem;
+}
+}
 
 
 
